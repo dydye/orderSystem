@@ -2,24 +2,24 @@
 simple order system
 
 # module:
-eureka：registration center
-common：common util and class
-parent：parent pom
-order：order service
-product: product service
-user: user service
+eureka：registration center  
+common：common util and class    
+parent：parent pom   
+order：order service 
+product: product service    
+user: user service    
 
 # run step
-run EurekaApplication
-run UserApplication
-run OrderApplication
-run ProductApplication
+run EurekaApplication   
+run UserApplication     
+run OrderApplication    
+run ProductApplication  
 
 # url
-eureka: http://localhost:8000/
-order swagger: http://localhost:8001/swagger-ui.html
-product swagger: http://localhost:8002/swagger-ui.html
-user swagger: http://localhost:8003/swagger-ui.html
+eureka: http://localhost:8000/  
+order swagger: http://localhost:8001/swagger-ui.html    
+product swagger: http://localhost:8002/swagger-ui.html  
+user swagger: http://localhost:8003/swagger-ui.html 
 
 # invoke step
 (1) add user:
