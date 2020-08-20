@@ -15,6 +15,12 @@ run UserApplication
 run OrderApplication
 run ProductApplication
 
+# url
+eureka: http://localhost:8000/
+order swagger: http://localhost:8001/swagger-ui.html
+product swagger: http://localhost:8002/swagger-ui.html
+user swagger: http://localhost:8003/swagger-ui.html
+
 # invoke step
 (1) add user:
 
