@@ -68,7 +68,7 @@ return:
       "data": null
 }`   
    
-3、fail buy num overt stock: 
+3、fail buy num over stock: 
    
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"buyNum": 21, "productId": 1, "userId": 1}' 'http://localhost:8002/product/buyProduct'`
      
