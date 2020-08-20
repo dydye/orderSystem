@@ -1,7 +1,7 @@
 # orderSystem
 simple order system
 
-# module:
+# module
 eureka：registration center  
 common：common util and class    
 parent：parent pom   
@@ -40,29 +40,41 @@ user swagger: http://localhost:8003/swagger-ui.html
 
 (5) get a product:
 
-`curl -X GET --header 'Accept: application/json' 'http://localhost:8002/product/getProduct?productId=1'`
+ `curl -X GET --header 'Accept: application/json' 'http://localhost:8002/product/getProduct?productId=1'`
 
 (6) buy product :
-    1、success:`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"buyNum": 2, "productId": 1, "userId": 1}' 'http://localhost:8002/product/buyProduct'`
-    return:
-   `{
+1、success:
+`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"buyNum": 2, "productId": 1, "userId": 30 }' 'http://localhost:8002/product/buyProduct'`
+   
+return:
+
+`{
        "retCode": 200,
        "retMsg": "success",
        "data": true
-   }`
+}`
    
-   2、fail userId does not exist:`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"buyNum": 30, "productId": 1, "userId": 30 }' 'http://localhost:8002/product/buyProduct'`
-   return:
-   `{
+2、fail userId does not exist:
+
+`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"buyNum": 30, "productId": 1, "userId": 30 }' 'http://localhost:8002/product/buyProduct'
+`
+return:
+
+`{
       "retCode": 3000,
       "retMsg": "user not exists",
       "data": null
-    }`
+}`   
    
-   3、fail buy num overt stock: `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"buyNum": 21, "productId": 1, "userId": 1}' 'http://localhost:8002/product/buyProduct'`
-    return:
-    `{
+3、fail buy num overt stock: 
+   
+`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"buyNum": 21, "productId": 1, "userId": 1}' 'http://localhost:8002/product/buyProduct'`
+     
+return:
+
+`{
       "retCode": 3000,
       "retMsg": "user not exists",
       "data": null
-    }`
+}`
+   
