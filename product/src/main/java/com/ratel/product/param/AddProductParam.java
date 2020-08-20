@@ -25,6 +25,9 @@ public class AddProductParam implements Serializable {
 	@Length(max = 20, message = "the product name cannot more than {max} characters ")
 	private String productName;
 
+	@NotNull(message = "productStock must not be null")
+	private Integer productStock;
+
 	@NotBlank(message = "productName must not be null or empty")
 	@Length(max = 20, message = "the product name cannot more than {max} characters ")
 	private String productCode;

@@ -65,4 +65,13 @@ public class ApiResponse<T> implements Serializable {
     public static <T> ApiResponse<T> failure(BaseErrorCode baseErrorCode) {
         return new ApiResponse<T>().setRetCode(baseErrorCode.getCode()).setRetMsg(baseErrorCode.getMsg());
     }
+
+    public static <T> T successData(ApiResponse<T> apiResponse) {
+
+        if (apiResponse != null && apiResponse.getRetCode() == SUCCESS_CODE) {
+            return apiResponse.getData();
+        }
+
+        return null;
+    }
 }

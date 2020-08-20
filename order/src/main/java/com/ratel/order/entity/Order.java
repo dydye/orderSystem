@@ -30,17 +30,14 @@ public class Order implements Serializable {
 	@Column(name = "user_id")
 	private Long userId;
 
+	@Column(name = "product_id")
+	private Long productId;
+
 	@Column(name = "order_no")
 	private String orderNo;
 
 	@Column(name = "order_status")
 	private Integer orderStatus;
-
-	@Column(name = "pay_status")
-	private Integer payStatus;
-
-	@Column(name = "pay_time")
-	private Date payTime;
 
 	@Column(name = "receiver_name")
 	private String receiverName;
@@ -54,14 +51,8 @@ public class Order implements Serializable {
 	@Column(name = "receiver_post_code")
 	private String receiverPostCode;
 
-	@Column(name = "receive_time")
-	private Date receiveTime;
-
 	@Column(name = "remark")
 	private String remark;
-
-	@Column(name = "delete_status")
-	private Integer deleteStatus;
 
 	@Column(name = "create_time")
 	private Date createTime;

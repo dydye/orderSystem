@@ -4,6 +4,7 @@ import com.ratel.common.base.BaseService;
 import com.ratel.common.exception.ServiceException;
 import com.ratel.product.entity.Product;
 import com.ratel.product.param.AddProductParam;
+import com.ratel.product.param.BuyProductParam;
 
 /**
  * @author daiyun
@@ -13,15 +14,25 @@ public interface ProductService extends BaseService<Product, Long> {
 
 	/**
 	 * delete by productClassifyId
+	 *
 	 * @param productClassifyId
-	 * @return					  Number of deletions
+	 * @return Number of deletions
 	 */
 	int deleteByProductClassifyId(Long productClassifyId);
 
 	/**
 	 * add a product
+	 *
 	 * @param param
-	 * @return		 primary key id
+	 * @return primary key id
 	 */
 	Long addProduct(AddProductParam param) throws ServiceException;
+
+	/**
+	 * buy product
+	 *
+	 * @param buyProductParam
+	 * @return
+	 */
+	boolean buyProduct(BuyProductParam buyProductParam) throws ServiceException;
 }

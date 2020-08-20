@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -31,7 +32,7 @@ public class GlobalExceptionHandler {
 		ErrorMsg errorMsg = serviceException.getErrorMsg();
 		ApiResponse<Object> apiResponse = null;
 		if (errorMsg != null) {
-			log.error("failure params:{}, message:{}", JsonUtils.toJson(params), JsonUtils.toJson(errorMsg));
+			log.error("failure params:{}, message:{}", JsonUtils.toJson(params), JsonUtils.toJson(errorMsg), e);
 			apiResponse = new ApiResponse<>().setRetCode(errorMsg.getCode()).setRetMsg(errorMsg.getMsg());
 		}
 		response.setStatus(HttpStatus.OK.value());

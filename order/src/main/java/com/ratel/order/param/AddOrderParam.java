@@ -15,4 +15,17 @@ public class AddOrderParam implements Serializable {
 
 	private static final long serialVersionUID = 8852898393165695101L;
 
+	private Long userId;
+
+	private Long productId;
+
+	private String receiverName;
+
+	private String receiverPhone;
+
+	private String receiverAddress;
+
+	private String receiverPostCode;
+
+	private String remark;
 }

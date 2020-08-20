@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2020/8/19
  */
 @RestController
-@RequestMapping("/order")
+@RequestMapping("order")
 @Slf4j
 @Api(tags = "order api")
 public class OrderController {

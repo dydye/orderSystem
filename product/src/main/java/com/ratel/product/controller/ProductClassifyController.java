@@ -47,7 +47,7 @@ public class ProductClassifyController {
 
 	@GetMapping("getProductClassifyById")
 	@ApiOperation(value = "get an productClassify")
-	public ApiResponse<ProductClassify> getOrderById(
+	public ApiResponse<ProductClassify> getProductClassifyById(
 			@ApiParam(value = "productClassifyId", required = true) @RequestParam Long productClassifyId) {
 		ProductClassify productClassify = productClassifyService.findById(productClassifyId);
 		return ApiResponse.success(productClassify);

@@ -1,4 +1,4 @@
-package com.ratel.parent.client.config;
+package com.ratel.common.base;
 
 /**
  * service name

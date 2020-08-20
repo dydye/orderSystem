@@ -23,7 +23,7 @@ public class Product implements Serializable {
 	private static final long serialVersionUID = -240311977954810914L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "product_id")
 	private Long productId;
 
@@ -32,6 +32,9 @@ public class Product implements Serializable {
 
 	@Column(name = "product_name")
 	private String productName;
+
+	@Column(name = "product_stock")
+	private Integer productStock;
 
 	@Column(name = "product_code")
 	private String productCode;
@@ -44,9 +47,6 @@ public class Product implements Serializable {
 
 	@Column(name = "product_address")
 	private String productAddress;
-
-	@Column(name = "delete_status")
-	private Integer deleteStatus;
 
 	@Column(name = "create_time")
 	private Date createTime;

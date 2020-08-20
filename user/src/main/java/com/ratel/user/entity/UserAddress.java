@@ -22,12 +22,12 @@ public class UserAddress implements Serializable {
 	private static final long serialVersionUID = 8264247176000923029L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "address_id")
 	private Long addressId;
 
 	@Column(name = "user_id")
-	private String userId;
+	private Long userId;
 
 	@Column(name = "province")
 	private String province;
@@ -46,9 +46,6 @@ public class UserAddress implements Serializable {
 
 	@Column(name = "post_code")
 	private String postCode;
-
-	@Column(name = "delete_status")
-	private Integer deleteStatus;
 
 	@Column(name = "create_time")
 	private Date createTime;

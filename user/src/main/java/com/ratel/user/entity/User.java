@@ -22,7 +22,7 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 8264247176000923029L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
 	private Long userId;
 
@@ -37,9 +37,6 @@ public class User implements Serializable {
 
 	@Column(name = "email")
 	private String email;
-
-	@Column(name = "delete_status")
-	private Integer deleteStatus;
 
 	@Column(name = "create_time")
 	private Date createTime;
