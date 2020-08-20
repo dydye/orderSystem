@@ -56,8 +56,8 @@ return:
    
 2、fail userId does not exist:
 
-`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"buyNum": 30, "productId": 1, "userId": 30 }' 'http://localhost:8002/product/buyProduct'
-`
+`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"buyNum": 30, "productId": 1, "userId": 30 }' 'http://localhost:8002/product/buyProduct'`
+
 return:
 
 `{
