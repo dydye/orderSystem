@@ -43,7 +43,9 @@ user swagger: http://localhost:8003/swagger-ui.html
  `curl -X GET --header 'Accept: application/json' 'http://localhost:8002/product/getProduct?productId=1'`
 
 (6) buy product :
+
 1、success:
+
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"buyNum": 2, "productId": 1, "userId": 30 }' 'http://localhost:8002/product/buyProduct'`
    
 return:
